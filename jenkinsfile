@@ -1,20 +1,9 @@
 pipeline {
-    agent any
-
+    agent: any
     stages {
-        stage('Build') {
-            steps {
-                echo 'Building application ...'
-            }
-        }
-        stage('Test') {
-            steps {
-                echo 'Running tests ..'
-            }
-        }
-        stage('Deploy') {
-            steps {
-                echo 'Deploying ...'
+        steps {
+            step {
+                git 'https://github.com/mass-development/docker-test'
             }
         }
     }
