@@ -1,9 +1,10 @@
 pipeline {
     agent any
     stages {
-        stage {
+        stage('checkout') {
             step {
                 git 'https://github.com/mass-development/docker-test'
+                sh 'checking out the repository'
             }
         }
     }
