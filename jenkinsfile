@@ -4,7 +4,6 @@ pipeline {
     stages {
         stage('checkout') {
             steps {
-                git branch: 'main', url: 'https://github.com/mass-development/docker-test'
                 sh 'echo "checking out the repository"'
             }
         }
