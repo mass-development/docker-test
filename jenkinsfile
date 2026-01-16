@@ -1,7 +1,7 @@
 pipeline {
     agent any
     stages {
-        steps {
+        stage {
             step {
                 git 'https://github.com/mass-development/docker-test'
             }
