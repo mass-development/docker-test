@@ -7,10 +7,23 @@ pipeline {
                 sh 'echo "checking out the repository"'
             }
         }
+
         stage('build') {
             steps {
                 sh 'echo "building the repository"'
             }
+        }
+    }
+
+    post {
+        success {
+            echo '✅ Pipeline succeeded'
+        }
+        failure {
+            echo '❌ Pipeline failed'
+        }
+        always {
+            echo '🧹 Pipeline finished (success or failure)'
         }
     }
 }
