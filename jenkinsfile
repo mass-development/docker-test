@@ -7,5 +7,10 @@ pipeline {
                 sh 'echo "checking out the repository"'
             }
         }
+        stage('build') {
+            steps {
+                sh 'echo "building the repository"'
+            }
+        }
     }
 }
